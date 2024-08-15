@@ -35,28 +35,41 @@ signal.signal(signal.SIGINT, signal_handler)
 
 # Read from sys.stdin
 for line in sys.stdin:
-    line = line.strip()
-    parts = line.split()
+    try:
+        line = line.strip()
+        parts = line.split()
 
-    # validate the log line format
-    if len(parts) < 7 or not parts[-2].isdigit() or not parts[-1].isdigit():
-        continue
+        # validate the log line format
+        if len(parts) < 7:
+            raise ValueError("Incorrect format: Not enough parts in the input")
+        if not parts[-2].isdigit():
+            raise ValueError("Invalid status code: Not an integer")
+        if not parts[-1].isdigit():
+            raise ValueError("Invalid file size: Not an integer")
 
-    # Extract the status code and file size
-    status_code = int(parts[-2])
-    file_size = int(parts[-1])
+        # Extract the status code and file size
+        status_code = int(parts[-2])
+        file_size = int(parts[-1])
 
-    # validate status codes and count occurrences of each code
-    if status_code in valid_status_codes:
-        status_code_counts[status_code] += 1
+        # validate status codes and count occurrences of each code
+        if status_code in valid_status_codes:
+            status_code_counts[status_code] += 1
 
-    # aggregate file size and count the number of lines
-    total_file_size += file_size
-    line_count += 1
+        # aggregate file size and count the number of lines
+        total_file_size += file_size
+        line_count += 1
 
-    # Print statistics for every 10 lines
-    if line_count % 10 == 0:
-        print_stats()
+        # Print statistics for every 10 lines
+        if line_count % 10 == 0:
+            print_stats()
 
-# run the statistics if Ctrl + C is not encountered
-print_stats()
+    except ValueError as ve:
+        print('Skipping line due to error: {}'.format(ve), file=sys.stderr)
+    except Exception as e:
+        print('An unexpected eror occured: {}'.format(e), file=sys.stderr)
+
+try:
+    # run the statistics if Ctrl + C is not encountered
+    print_stats()
+except Exception as e:
+    print('Error: {}'.format(e), file=sys.stderr)
