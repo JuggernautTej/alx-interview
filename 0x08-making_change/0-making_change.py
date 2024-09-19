@@ -12,8 +12,8 @@ def makeChange(coins, total):
         An integer of the fewest number of coins needed to meet
         total, zero (if total is zero or less), or -1 if the total
         cannot be met by the number of coins"""
-    if total <= 0:
-        return 0
+    # if total <= 0:
+    #     return 0
     # Initialize dynamic programming array with a large number
     arr = [total + 1] * (total + 1)
     # Initialize base case that no coins are needed to make amount 0
@@ -29,4 +29,4 @@ def makeChange(coins, total):
                     arr[x], arr[x - coin] + 1
                 )
     # If arr[total] is still greater than total, total can't be met
-    return arr[total] if arr[total] != total + 1 else -1
+    return arr[total] if arr[total] <= total else -1
