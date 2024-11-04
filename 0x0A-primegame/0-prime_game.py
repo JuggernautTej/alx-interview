@@ -33,6 +33,9 @@ def isWinner(x, nums):
         nums: an array of n.
     Returns:
         The winner of the game as a string"""
+    if x <= 0 or not nums or all(n == 0 for n in nums):
+        return None
+
     def sieveOfE(n):
         """The helper function to get the prime numbers
         Args:
@@ -53,9 +56,6 @@ def isWinner(x, nums):
     maria_wins = 0
     ben_wins = 0
 
-    if x <= 0:
-        return None
-    
     for n in nums:
         move_count = 0
         numbers = [True] * (n + 1)
