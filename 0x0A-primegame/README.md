@@ -37,17 +37,17 @@ For this project, you will need to leverage your understanding of prime numbers,
 
 -   **Prime Numbers and Sieve of Eratosthenes**:
     
-    -   [Khan Academy: Prime Numbers](https://intranet.alxswe.com/rltoken/IUKEfGVroNza8u37x0lEzw "Khan Academy: Prime Numbers"): Introduction to prime numbers.
-    -   [Sieve of Eratosthenes in Python](https://intranet.alxswe.com/rltoken/sVjdrNQEaErO_qRYsVMTEg "Sieve of Eratosthenes in Python"): A step-by-step guide to implementing the sieve algorithm in Python.
+    -   [Khan Academy: Prime Numbers](https://www.khanacademy.org/math/cc-fourth-grade-math/imp-factors-multiples-and-patterns/imp-prime-and-composite-numbers/v/prime-numbers "Khan Academy: Prime Numbers"): Introduction to prime numbers.
+    -   [Sieve of Eratosthenes in Python](https://www.geeksforgeeks.org/sieve-of-eratosthenes/ "Sieve of Eratosthenes in Python"): A step-by-step guide to implementing the sieve algorithm in Python.
 -   **Game Theory Basics**:
     
-    -   [Game Theory Introduction](https://intranet.alxswe.com/rltoken/lH4z--LnsuXYKh23Ji9Elw "Game Theory Introduction"): A simple explanation of game theory and strategic decision-making.
+    -   [Game Theory Introduction](https://www.investopedia.com/terms/g/gametheory.asp "Game Theory Introduction"): A simple explanation of game theory and strategic decision-making.
 -   **Dynamic Programming**:
     
-    -   [What Is Dynamic Programming With Python Examples](https://intranet.alxswe.com/rltoken/W6T0RxWaFG3GisPxLLNYkQ "What Is Dynamic Programming With Python Examples"): An introduction to dynamic programming with Python examples.
+    -   [What Is Dynamic Programming With Python Examples](https://skerritt.blog/dynamic-programming/ "What Is Dynamic Programming With Python Examples"): An introduction to dynamic programming with Python examples.
 -   **Python Official Documentation**:
     
-    -   [Python Lists](https://intranet.alxswe.com/rltoken/JTEGXnSDYDp8yblD9y86eg "Python Lists"): Managing lists in Python, useful for tracking the game state.
+    -   [Python Lists](https://docs.python.org/3/tutorial/introduction.html#lists "Python Lists"): Managing lists in Python, useful for tracking the game state.
 
 By grasping these concepts and making use of the recommended resources, you will be well-equipped to approach the problem with a solid understanding of both the mathematical and programming challenges involved. The key to success in this project lies in applying efficient algorithms to manage the game’s state and making optimal decisions based on the game’s rules.
 
